@@ -151,6 +151,10 @@ For each GitHub Account, create a script file that changes the global user.name 
 <hr style="border:2px solid black; border-radius: 5px; margin: auto; background-color: black;">
 
 
+## Using VScode / SSH configurations
+
+***
+
 
 
 
