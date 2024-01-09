@@ -1,18 +1,21 @@
 # github-vscode
 
-***
+<hr style="border:2px solid black; border-radius: 5px; margin: auto; background-color: black;">
 
-These notes document the process to integrate VSCode with GitHub on MacOS Sonoma
+##
+These notes document the process to integrate VScode with GitHub on MacOS Sonoma
 
 Concepts and Tools
 
 * Create SSH keys (tools:  ssh-keygen ssh-add)
 * Add new keys to the SSH Keychain
+* Add Public Key to GitHub
 * Create SSH Config Files
 * Create scripts to set SSH user.name & user.email
-* Testing in VSCode
+* Using the keys in VScode
+##
 
-***
+<hr style="border:2px solid black; border-radius: 5px; margin: auto; background-color: black;">
 
 ## Create SSH Keys
 
@@ -25,9 +28,11 @@ Concepts and Tools
 **Continue for other GitHub Accounts**
 
 > ssh-keygen -t ed25519 -f /Users/username/.ssh/id_mykey_2
-
 ##
-## Create SSH Config File
+
+<hr style="border:2px solid black; border-radius: 5px; margin: auto; background-color: black;">
+
+## Add SSH Keys to the KeyChain
 
 For each key created, add the SSH key to your Keychain
 
@@ -38,11 +43,37 @@ For each key created, add the SSH key to your Keychain
 You can confirm the keys in your Keychain
 
 > ssh-add -l
+##
 
+<hr style="border:2px solid black; border-radius: 5px; margin: auto; background-color: black;">
+
+## Add Public SSH Keys into GitHub Account
+- Log into your first git hub account and enter account ***Settings***
+##
+![Settings](./media/GitHub-Settings.png)
+
+***
+- On the *Settings* navigation panal, select ***SSH and GPG keys***
+
+![SSH/GPG option](./media/GitHub-SSH.png)
+
+***
+Select the ***Add Key*** button
+
+![Add Key button](./media/GitHub-AddKey.png)
+
+***
+Add the SSH Key information for ***id_mykey1.pub*** file
+
+![SSH Key Info](./media/GitHub-KeyInfo.png)
+
+- Now do the same for the remaining accounts.
 
 ##
-## Create SSH Config File
 
+<hr style="border:2px solid black; border-radius: 5px; margin: auto; background-color: black;">
+
+## Create SSH Config File
 In the /Users/username/.ssh folder, create a new config file if it doesn't exist
 
 > touch config
@@ -72,6 +103,9 @@ Add the following lines for GitHub Account 2
 Save the file.
 
 ##
+
+<hr style="border:2px solid black; border-radius: 5px; margin: auto; background-color: black;">
+
 ## Create scripts to set SSH user.name & user.email
 
 To switch between GitHub accounts, you may receive error messages regarding you global variables for user.name and user.email global variables.  The switching can be accomplished with some VScode extentions or creating local scripts to execute.  
@@ -112,6 +146,9 @@ For each GitHub Account, create a script file that changes the global user.name 
 >
 > chmod +x github2
 
+##
+
+<hr style="border:2px solid black; border-radius: 5px; margin: auto; background-color: black;">
 
 
 
