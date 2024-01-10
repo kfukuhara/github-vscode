@@ -195,6 +195,16 @@ In GitHub, copy the *SSH* link in the ***Code*** button, NOTE: **SSH** not the *
 
 ![GitHub clone](./media/github-clone1.png)
 
+***
+
+In the Folders section, clone a repository by selecting the ***Clone Repository*** button.  In the Command Palette, the prompt for *Clone from URL* paste in the SSH address from GitHub.
+
+Modify the SSH URL by changing the hostname *github.com* with the hostname refereenced in the ~/.ssh/config file, i.e. ***github1***
+
+
+![GitHub clone](./media/vscode-clone2.png)
+
+###Viola 
 
 
 
