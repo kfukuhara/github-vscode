@@ -153,7 +153,48 @@ For each GitHub Account, create a script file that changes the global user.name 
 
 ## Using VScode / SSH configurations
 
+This section reviews the process to login and set the global variables to access GitHub via SSH
+
 ***
+
+### Sign into GitHub through VScode
+
+Open the ***Accounts*** feature At the bottom left of VScode and select *Sign in with GitHub...* option.
+
+![VScode GitHub Login](./media/vscode-signin-github.png)
+
+***
+
+#### Login to GitHub using your account credentials
+
+![GitHub login](./media/vscode-github-login.png)
+
+***
+
+#### If your account is configured with 2FA, respond to the 2FA challenge
+
+![GitHub 2FA](./media/vscode-signin-github-2fa.png)
+
+***
+
+#### Run the Global user variable scripts
+
+In the VScode *terminal* run the Global Variable script for the account logged in.  In this example, we logged into our first GitHub account -  *github1* script
+
+***
+
+![Global Variables](./media/vscode-globalval-scripts.png)
+
+##
+
+<hr style="border:2px solid black; border-radius: 5px; margin: auto; background-color: black;">
+
+## Cloning a Repository
+
+In GitHub, copy the *SSH* link in the ***Code*** button, NOTE: **SSH** not the **HTTPS** selection
+
+![GitHub clone](./media/github-clone1.png)
+
 
 
 
